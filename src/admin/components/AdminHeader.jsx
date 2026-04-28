@@ -1,9 +1,17 @@
 import React from 'react'
 
 import { CiPower } from "react-icons/ci";
-
+import { useNavigate } from 'react-router-dom';
 
 function AdminHeader() {
+
+  const navigate=useNavigate()
+
+  const adminLogout=()=>{
+    sessionStorage.clear()
+    navigate('/')
+  }
+
   return (
     <>
     <div className='w-full p-5 flex justify-between'>
@@ -11,7 +19,8 @@ function AdminHeader() {
         <img src="/headerlogo.png" alt="" className='w-[50px]'/>
         <span className='text-xl'>BOOK STORE</span>
       </div>
-      <button className='flex items-center gap-2 border shadow rounded-lg p-3 hover:bg-black hover:text-white'>
+      <button className='flex items-center gap-2 border shadow rounded-lg p-3 hover:bg-black hover:text-white'
+      onClick={adminLogout}>
         <CiPower className='font-semibold text-lg'/>
         Logout
       </button>

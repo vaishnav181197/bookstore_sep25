@@ -1,0 +1,48 @@
+Google Authentication:-
+----------------------------
+-social authentication by an existing google account
+-react-oauth/google
+ npm i @react-oauth/google
+
+
+=>Context Api:-
+-----------------
+Context API in React provides a way to share data globally across components 
+without prop drilling. It allows creating a lightweight global state accessible by any component.
+
+-Enables global state management without third-party libraries.
+-Avoids prop drilling in deeply nested components.
+-Created using React.createContext().
+-Ideal for sharing themes, user info, or settings across the app
+
+->Context API prevents prop drilling by providing global state accessible anywhere,
+ simplifying state management and improving performance.
+
+-Avoids passing props through multiple layers.
+-Creates global variables for all components.
+-Boosts performance by reducing re-renders.
+-Easier and lighter than Redux.
+
+->Working
+To work with Context API we need React.createContext().
+It has two properties Provider and Consumer. The Provider acts as a parent it passes the state
+to its children whereas the Consumer uses the state that has been passed.
+
+-Provider: This is used to provide the context to components.
+-Consumer: This is used to consume the context value in child components.
+
+=>Benefits of Context API over React Redux
+Context API is simpler, maintains one-way data flow, and allows multiple stores compared 
+to Redux’s single store.
+
+-Less boilerplate; fewer files to update.
+-Maintains React’s one-way data binding.
+-Supports multiple contexts/stores.
+-Easier and lighter than Redux.
+
+=>Implementation:-
+-------------------
+1.create a context component
+2.make entire app its child
+3.create a context instance in context component
+4.provide needed global states to children using context instance
